@@ -5,15 +5,12 @@ package com.example.android.bullsandcows.scenes.common;
  */
 public interface BaseContractor {
 
-    interface BaseView {
-
+    interface BaseView <T> {
+        void setPresenter(T presenter);
     }
 
-    interface BasePresenter <T> {
-
-        void attachView(T view);
-        void detachView();
-
+    interface BasePresenter {
+        void start();
     }
 
 }
